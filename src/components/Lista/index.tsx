@@ -1,5 +1,6 @@
 import React from "react";
-import  style from'./Lista.module.scss';
+import style from './Lista.module.scss';
+import Item from "./Item";
 
 function Lista() {
     const tarefa = [{
@@ -14,11 +15,7 @@ function Lista() {
             <h2>Estudos do dia</h2>
             <ul>
                 {tarefa.map((item, index) => (
-                    <li key={index} className={style.item} >
-                        <h3>{item.tarefa}</h3>
-                        <samp>{item.tempo}</samp>
-                    </li>
-
+                    <Item key={index} {...item} />
                 ))}
             </ul>
         </aside>
