@@ -21,10 +21,8 @@ export default function Cronometro({ selecionado }: Props) {
     return (
         <div className={style.cronometro}>
             <p className={style.titulo}>Escolha um carde inicie o cronômetro  </p>
-            Tempo :{String(tempo)}
-            
             <div className={style.relogioWrapper}>
-                <Relogio />
+                <Relogio tempo={tempo} />
             </div>
             <Botao>
                 Começar!
