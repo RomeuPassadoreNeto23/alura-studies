@@ -5,10 +5,11 @@ import { tempoParaSegundos } from "../../common/utils/time";
 import { ITarefas } from "../../types/tarefas";
 import { useEffect, useState } from "react";
 interface Props {
-    selecionado: ITarefas | undefined
+    selecionado: ITarefas | undefined,
+    finazilarTarefa: () => void
 }
 
-export default function Cronometro({ selecionado }: Props) {
+export default function Cronometro({ selecionado ,finazilarTarefa }: Props) {
     const [tempo, setTempo] = useState<Number>();
     useEffect(() => {
         if (selecionado?.tempo) {
@@ -22,6 +23,7 @@ export default function Cronometro({ selecionado }: Props) {
                 setTempo( contador - 1)
                 return regressiva( contador -1)
             }
+            finazilarTarefa()
 
         }, 1000)
 
