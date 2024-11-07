@@ -1,25 +1,25 @@
 .botao {
-    align-self: center;
-    background-color: #88bcd1;
-    border-radius: 10px;
-    box-shadow: 2px 4px 4px #0000009F;
-    color: #272626;
-    cursor: pointer;
-    font-size: 1.25rem;
-    padding: 16px;
-    width: 150px;
-    
-    &:active {
-      background-color: #7CA6B7;
-      box-shadow: 2px 2px 4px #0000009F inset;
-    }
+  align-self: center; // Centraliza o botão no eixo vertical dentro do contêiner pai
+  background-color: #88bcd1; // Define a cor de fundo do botão como um tom de azul claro
+  border-radius: 10px; // Arredonda os cantos do botão em 10px
+  box-shadow: 2px 4px 4px #0000009F; // Adiciona uma sombra ao botão com leve deslocamento e opacidade
+  color: #272626; // Define a cor do texto do botão como cinza escuro
+  cursor: pointer; // Muda o cursor para "pointer" ao passar sobre o botão, indicando que ele é clicável
+  font-size: 1.25rem; // Define o tamanho da fonte do texto dentro do botão
+  padding: 16px; // Define o espaçamento interno do botão, proporcionando um botão maior
+  width: 150px; // Define a largura do botão como 150px
+
+  &:active { // Estilos aplicados ao botão quando ele é pressionado
+      background-color: #7CA6B7; // Altera a cor de fundo para um tom mais escuro de azul
+      box-shadow: 2px 2px 4px #0000009F inset; // Adiciona uma sombra interna ao pressionar, criando um efeito de "pressionado"
   }
-  
-  @media screen and (min-width: 1280px) {
-    .botao {
-      grid-column-start: span 2;
-      justify-self: center;
-      width: 200px;
-      font-size: 2.25rem;
-    }
+}
+
+@media screen and (min-width: 1280px) {
+  .botao {
+      grid-column-start: span 2; // Em telas grandes, o botão ocupa duas colunas em um layout de grid
+      justify-self: center; // Centraliza o botão horizontalmente dentro de seu grid container
+      width: 200px; // Aumenta a largura do botão para 200px em telas grandes
+      font-size: 2.25rem; // Aumenta o tamanho da fonte para tornar o botão mais visível em telas maiores
   }
+}

@@ -1,45 +1,45 @@
 .item {
-    background-color: #4D4D4D;
-    border-radius: 8px;
-    box-shadow: 2px 4px 4px #0000009F;
-    padding: 12px;
-    margin-bottom: 8px;
-    position: relative;
-    cursor: pointer;
-  
-    h3 {
-      margin-bottom: 8px;
-      word-break: break-all;
-    }
-  
-    span {
-      color: #D0D0D0;
-    }
-  
-    @media screen and (min-width:1280px) {
-      font-size: 1.8rem;
-    }
+  background-color: #4D4D4D; // Cor de fundo do item
+  border-radius: 8px; // Arredonda os cantos do item
+  box-shadow: 2px 4px 4px #0000009F; // Adiciona uma sombra ao redor
+  padding: 12px; // Define o espaçamento interno
+  margin-bottom: 8px; // Espaçamento inferior entre os itens
+  position: relative; // Define a posição relativa para posicionamento do ícone concluído
+  cursor: pointer; // Muda o cursor para "pointer" ao passar sobre o item
+
+  h3 {
+      margin-bottom: 8px; // Espaçamento abaixo do título da tarefa
+      word-break: break-all; // Quebra o texto se for muito longo
   }
-  
-  .itemSelecionado {
-    background-color: #292929;
-    box-shadow: 2px 4px 4px #0000009F inset;
+
+  span {
+      color: #D0D0D0; // Cor do texto para o tempo
   }
-  
-  .itemCompletado {
-    background-color: #566F42;
-    cursor: auto;
-  
-    .concluido {
-      display: block;
-      background-image: url('../../../assets/img/check-mark.svg');
-      background-repeat: no-repeat;
-      background-size: 38px 38px;
-      position: absolute;
-      top: 50%;
-      right: 12px;
-      transform: translateY(-50%);
-      width: 42px;
-      height: 43px;
-    }
+
+  @media screen and (min-width:1280px) {
+      font-size: 1.8rem; // Aumenta o tamanho da fonte em telas grandes
   }
+}
+
+.itemSelecionado {
+  background-color: #292929; // Cor de fundo para o item selecionado
+  box-shadow: 2px 4px 4px #0000009F inset; // Adiciona uma sombra interna
+}
+
+.itemCompletado {
+  background-color: #566F42; // Cor de fundo para o item completado
+  cursor: auto; // Desativa o cursor de pointer para itens completados
+
+  .concluido {
+      display: block; // Exibe o ícone de concluído
+      background-image: url('../../../assets/img/check-mark.svg'); // Ícone de verificação para tarefas concluídas
+      background-repeat: no-repeat; // Impede repetição da imagem
+      background-size: 38px 38px; // Define o tamanho do ícone
+      position: absolute; // Posiciona o ícone dentro do item
+      top: 50%; // Centraliza o ícone verticalmente
+      right: 12px; // Espaçamento da borda direita
+      transform: translateY(-50%); // Ajusta a posição vertical do ícone
+      width: 42px; // Largura do ícone
+      height: 43px; // Altura do ícone
+  }
+}

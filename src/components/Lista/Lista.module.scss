@@ -1,31 +1,28 @@
 .listaTarefas {
-    grid-area: tarefas;
-    height: 100%;
-  
-    h2 {
-      font-size: 1.25rem;
-      margin-bottom: 12px;
-    }
-  
-    ul {
-      max-height: 350px;
-      overflow-y: scroll;
-        scrollbar-width: thin;
-    }
-  
-    @media screen and (min-width:1280px) {
-      
-      h2{
-        text-align: center;
-        font-size: 2.25rem;
-        margin-bottom: 24px;
-      }
-  
-      ul {
-        overflow: auto;
-        max-height: 500px;
-      }
-    }
+  grid-area: tarefas; // Define a área no grid da página principal para a lista de tarefas
+  height: 100%; // Define a altura completa para o contêiner de lista
+
+  h2 {
+      font-size: 1.25rem; // Define o tamanho da fonte do título
+      margin-bottom: 12px; // Espaçamento abaixo do título
   }
-  
- 
+
+  ul {
+      max-height: 350px; // Define a altura máxima para a lista
+      overflow-y: scroll; // Adiciona barra de rolagem vertical se o conteúdo exceder a altura
+      scrollbar-width: thin; // Define a largura da barra de rolagem para ficar fina
+  }
+
+  @media screen and (min-width: 1280px) {
+      h2 {
+          text-align: center; // Centraliza o título em telas grandes
+          font-size: 2.25rem; // Aumenta o tamanho da fonte do título
+          margin-bottom: 24px; // Espaçamento maior abaixo do título
+      }
+
+      ul {
+          overflow: auto; // Permite rolagem automática
+          max-height: 500px; // Aumenta a altura máxima da lista em telas grandes
+      }
+  }
+}

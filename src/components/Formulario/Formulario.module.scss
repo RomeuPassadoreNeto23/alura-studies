@@ -1,61 +1,61 @@
 .novaTarefa {
-    display:flex;
-    flex-direction: column;
-    grid-area: nova-tarefa;
-    background-color: #7687A1;
-    border-radius: 10px;
-    box-shadow: 2px 4px 4px #0000009F;
-    padding: 12px;
-  
-    .inputContainer {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      margin-bottom: 16px;
-  
+  display: flex; // Define o layout como flexível
+  flex-direction: column; // Organiza os itens verticalmente
+  grid-area: nova-tarefa; // Define a área no grid da página principal para o formulário
+  background-color: #7687A1; // Cor de fundo do formulário
+  border-radius: 10px; // Arredonda os cantos do formulário
+  box-shadow: 2px 4px 4px #0000009F; // Adiciona uma sombra ao redor
+  padding: 12px; // Define o espaçamento interno
+
+  .inputContainer {
+      display: flex; // Define o layout como flexível
+      flex-direction: column; // Organiza os itens verticalmente
+      width: 100%; // Define a largura completa para o contêiner de entrada
+      margin-bottom: 16px; // Adiciona espaçamento inferior
+
       label {
-        margin-bottom: 8px;
-        font-size: 1.25rem;
+          margin-bottom: 8px; // Adiciona espaçamento abaixo do label
+          font-size: 1.25rem; // Define o tamanho da fonte do label
       }
-  
+
       input {
-        width: 100%;
-        padding: 8px 12px 4px;
-        box-sizing: border-box;
-        border: unset;
-        border-radius: 5px;
-        background-color: #5D677C;
-        box-shadow: 0px 2px 4px #2D2B2B9F inset;
-        
-        &::placeholder {
-          color: #BFBFBF;
-        }
+          width: 100%; // Define a largura completa para o campo de entrada
+          padding: 8px 12px 4px; // Define o espaçamento interno
+          box-sizing: border-box; // Inclui padding no cálculo da largura
+          border: unset; // Remove a borda padrão
+          border-radius: 5px; // Arredonda os cantos do campo de entrada
+          background-color: #5D677C; // Define a cor de fundo do campo de entrada
+          box-shadow: 0px 2px 4px #2D2B2B9F inset; // Sombra interna para o campo de entrada
+          
+          &::placeholder {
+              color: #BFBFBF; // Define a cor do texto do placeholder
+          }
       }
-    }
-  
-    @media screen and (min-width: 1280px) {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      font-size: 2.25rem;
-      padding: 24px;
-      box-sizing: border-box;
-  
-      .inputContainer {
-        width: calc(60% - 12px);
-  
-        &:last-of-type {
-          width: 40%;
-        }
-  
-        label {
-          font-size: 2rem;
-        }
-  
-        input {
-          height: 100%;
-          font-size: 1.75rem;
-        }
-      }
-    }
   }
+
+  @media screen and (min-width: 1280px) {
+      flex-direction: row; // Alinha os elementos horizontalmente em telas grandes
+      flex-wrap: wrap; // Permite que os elementos se ajustem em várias linhas, se necessário
+      justify-content: space-around; // Distribui o espaço entre os elementos
+      font-size: 2.25rem; // Aumenta o tamanho da fonte
+      padding: 24px; // Aumenta o padding em telas grandes
+      box-sizing: border-box;
+
+      .inputContainer {
+          width: calc(60% - 12px); // Define a largura para 60% do contêiner, menos uma margem
+
+          &:last-of-type {
+              width: 40%; // Define a largura do último contêiner para 40%
+          }
+
+          label {
+              font-size: 2rem; // Aumenta o tamanho da fonte dos labels em telas grandes
+          }
+
+          input {
+              height: 100%; // Define a altura do campo de entrada
+              font-size: 1.75rem; // Aumenta o tamanho da fonte do campo de entrada
+          }
+      }
+  }
+}

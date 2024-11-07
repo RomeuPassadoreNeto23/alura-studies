@@ -1,30 +1,32 @@
 .AppStyle {
-    display: grid;
-    grid-template-rows: min-content min-content auto;
-    grid-template-areas: 
-    "nova-tarefa"
-    "cronometro"
-    "tarefas"
-    ;
-    row-gap: 24px;
-    min-width: 320px;
-    min-height: calc(100vh - 32px);
-    width: 100%;
-    padding: 32px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    background-color: #171717;
+  display: grid; // Define o layout do elemento como grid, permitindo o uso de áreas e alinhamentos em grade.
+  grid-template-rows: min-content min-content auto; // Define três linhas: duas de altura mínima e uma que ocupa o espaço restante.
   
-    @media screen and (min-width:1280px)  {
-      grid-template-areas: 
-      "nova-tarefa tarefas"
-      "cronometro tarefas"
-      ;
-      column-gap: 64px;
-      grid-template-rows: min-content min-content;
-      grid-template-columns: 750px 300px;
-      justify-content: center;
-      align-content: center;
-      padding: 64px;
-    }
+  grid-template-areas: 
+    "nova-tarefa" // Área para o componente "nova-tarefa".
+    "cronometro" // Área para o componente "cronometro".
+    "tarefas"; // Área para o componente "tarefas".
+  
+  row-gap: 24px; // Define um espaçamento de 24px entre cada linha.
+  min-width: 320px; // Define a largura mínima da área como 320px, evitando que fique muito estreita em telas pequenas.
+  min-height: calc(100vh - 32px); // Define uma altura mínima que ocupa quase toda a altura da tela, menos 32px.
+  width: 100%; // Define a largura total do elemento para ocupar 100% do espaço do contêiner pai.
+  padding: 32px; // Define um preenchimento de 32px ao redor do conteúdo, adicionando espaçamento interno.
+  box-sizing: border-box; // Inclui o padding e a borda no cálculo de largura e altura, para evitar transbordamento.
+  border-radius: 10px; // Arredonda os cantos do elemento em 10px.
+  background-color: #171717; // Define a cor de fundo do elemento como um cinza escuro (#171717).
+  
+  // Estilos para telas grandes
+  @media screen and (min-width:1280px) {
+    grid-template-areas: 
+      "nova-tarefa tarefas" // Redefine a área para organizar "nova-tarefa" e "tarefas" lado a lado.
+      "cronometro tarefas"; // Redefine a área para organizar "cronometro" abaixo de "nova-tarefa" e ao lado de "tarefas".
+    
+    column-gap: 64px; // Define um espaçamento de 64px entre as colunas.
+    grid-template-rows: min-content min-content; // Define a altura das linhas como o mínimo necessário para o conteúdo.
+    grid-template-columns: 750px 300px; // Define duas colunas: uma com 750px e outra com 300px de largura.
+    justify-content: center; // Centraliza o conteúdo horizontalmente dentro do contêiner.
+    align-content: center; // Centraliza o conteúdo verticalmente dentro do contêiner.
+    padding: 64px; // Aumenta o padding para 64px em telas grandes, proporcionando mais espaçamento interno.
   }
+}
